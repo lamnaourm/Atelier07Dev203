@@ -2,6 +2,7 @@
   padding: 20px;
   display: flex;
   gap: 10px;
+  border-top: 4px solid rgb(1, 1, 30);
 }
 
 .delete button {
@@ -10,5 +11,5 @@
   color: aliceblue;
   border-radius: 10px;
   border: none;
-  padding: 5px;
+  padding: 6px;
 }

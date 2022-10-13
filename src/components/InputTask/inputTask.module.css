@@ -1,3 +1,26 @@
 .input {
     display: flex;
+    gap: 20px;
+    color: rgb(12, 12, 125);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 4px solid rgb(1, 1, 30);
+}
+
+.input input {
+    flex-grow: 1;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.input input:focus {
+    outline: 3px solid blue;
+}
+
+.input button {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import DeleteTasks from "../DeleteTasks/DeleteTasks";
+import FilterTasks from "../FilterTasks/FilterTasks";
 import InformationTask from "../InformationTask/InformationTask";
 import InputTask from "../InputTask/InputTask";
 import Task from "../Task/Task";
@@ -12,6 +13,7 @@ export default class ToDoListApp extends Component {
     this.state = {
       taches: [],
       description: "",
+      filter:1,
     };
   }
 
@@ -63,6 +65,13 @@ export default class ToDoListApp extends Component {
     this.setState({ taches: Mtaches });
   }
 
+  filterTasks = () => {
+    switch(this.state.filter){
+      case 1: return this.state.taches;
+      case 2: return this.state.taches.filter(item => item.completed);
+      case 3: return this.state.taches.filter(item => !item.completed);
+    }
+  }
   render() {
     return (
       <div className={styles.ToDoListApp}>
@@ -75,15 +84,19 @@ export default class ToDoListApp extends Component {
 
         <InformationTask taches={this.state.taches}/>
 
-        {this.state.taches.map((item, index) => (
-          <Task
-            key={index}
-            tache={item}
-            terminerOnClick={(e) => this.terminerTache(e, item.descr)}
-            encoursOnClick={(e) => this.encoursTache(e, item.descr)}
-            deleteOnClick={(e) => this.supprimerTache(e, item.descr)}
-          />
-        ))}
+        <FilterTasks filter={this.state.filter} All={() => this.setState({filter:1})} Termine={() => this.setState({filter:2})} Encours={() => this.setState({filter:3})}/>
+
+        <div className={styles.listtaches}>
+          {this.filterTasks().map((item, index) => (
+            <Task
+              key={index}
+              tache={item}
+              terminerOnClick={(e) => this.terminerTache(e, item.descr)}
+              encoursOnClick={(e) => this.encoursTache(e, item.descr)}
+              deleteOnClick={(e) => this.supprimerTache(e, item.descr)}
+            />
+          ))}
+        </div>
 
         <DeleteTasks deleteAll={this.deleteAll} deleteTermine={this.deleteTermine}/>
       </div>

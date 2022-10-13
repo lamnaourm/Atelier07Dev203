@@ -1,5 +1,7 @@
 .task {
     display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
 }
 
 .task h2 {
@@ -7,3 +9,14 @@
     margin: 0;
 }
 
+.task button {
+    background-color: cornflowerblue;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.task button:disabled {
+    background-color: rgb(175, 191, 221);
+
+}
