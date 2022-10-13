@@ -13,3 +13,7 @@
   border: none;
   padding: 6px;
 }
+
+.delete button:disabled {
+    background-color: rgb(215, 202, 202);
+}

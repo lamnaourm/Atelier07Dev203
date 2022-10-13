@@ -98,7 +98,7 @@ export default class ToDoListApp extends Component {
           ))}
         </div>
 
-        <DeleteTasks deleteAll={this.deleteAll} deleteTermine={this.deleteTermine}/>
+        <DeleteTasks taches={this.state.taches} deleteAll={this.deleteAll} deleteTermine={this.deleteTermine}/>
       </div>
     );
   }

@@ -2,12 +2,14 @@
     padding: 10px;
     border-radius: 10px;
     background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .listtaches{
     height: 200px;
     overflow: scroll;
     padding: 10px;
+    margin-top: 5px;
 }
 
 .listtaches::-webkit-scrollbar {
@@ -19,6 +21,6 @@
   }
   
   .listtaches::-webkit-scrollbar-thumb {
-    background-color: blue;    /* color of the scroll thumb */
+    background-color: rgb(14, 116, 21);    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
   }

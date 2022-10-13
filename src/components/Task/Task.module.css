@@ -2,6 +2,8 @@
     display: flex;
     gap: 10px;
     margin-bottom: 5px;
+    padding: 6px;
+    border: 1px solid rgb(223, 223, 223);
 }
 
 .task h2 {

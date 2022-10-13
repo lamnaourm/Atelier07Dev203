@@ -8,7 +8,9 @@
 .information h2 {
     font-size: 12px;
     padding: 10px;
-    background-color: rgb(149, 150, 207);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(43, 17, 192) 0px 0px 0px 3px;
+    background-color: rgb(106, 107, 176);
+    color: white;
+    border: 2px solid rgb(62, 50, 129);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
