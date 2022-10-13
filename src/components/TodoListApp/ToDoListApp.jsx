@@ -1,6 +1,9 @@
 import React, { Component } from "react";
+import DeleteTasks from "../DeleteTasks/DeleteTasks";
+import InformationTask from "../InformationTask/InformationTask";
 import InputTask from "../InputTask/InputTask";
 import Task from "../Task/Task";
+import styles from './todolistapp.module.css'
 
 export default class ToDoListApp extends Component {
   constructor(props) {
@@ -51,15 +54,26 @@ export default class ToDoListApp extends Component {
     }
   }
 
+  deleteAll = ()=> {
+    this.setState({taches:[]})
+  }
+
+  deleteTermine = () => {
+    let Mtaches = this.state.taches.filter((item) => item.completed===false);
+    this.setState({ taches: Mtaches });
+  }
+
   render() {
     return (
-      <div>
+      <div className={styles.ToDoListApp}>
         <InputTask
           param={this.value}
           onAddClick={this.addTache}
           onChangeDesc={(e) => this.setState({ description: e.target.value })}
           description={this.state.description}
         />
+
+        <InformationTask taches={this.state.taches}/>
 
         {this.state.taches.map((item) => (
           <Task
@@ -69,6 +83,8 @@ export default class ToDoListApp extends Component {
             deleteOnClick={(e) => this.supprimerTache(e, item.descr)}
           />
         ))}
+
+        <DeleteTasks deleteAll={this.deleteAll} deleteTermine={this.deleteTermine}/>
       </div>
     );
   }

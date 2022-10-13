@@ -1,0 +1,11 @@
+.information{
+    display: flex;
+    gap: 20px;
+}
+
+.information h2 {
+    font-size: 12px;
+    padding: 10px;
+    background-color: bisque;
+}
+
