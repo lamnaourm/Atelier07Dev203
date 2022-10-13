@@ -75,8 +75,9 @@ export default class ToDoListApp extends Component {
 
         <InformationTask taches={this.state.taches}/>
 
-        {this.state.taches.map((item) => (
+        {this.state.taches.map((item, index) => (
           <Task
+            key={index}
             tache={item}
             terminerOnClick={(e) => this.terminerTache(e, item.descr)}
             encoursOnClick={(e) => this.encoursTache(e, item.descr)}

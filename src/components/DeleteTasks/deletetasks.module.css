@@ -1,0 +1,14 @@
+.delete {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.delete button {
+  flex-grow: 1;
+  background-color: brown;
+  color: aliceblue;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+}
